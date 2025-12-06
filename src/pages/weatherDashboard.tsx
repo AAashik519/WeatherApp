@@ -122,6 +122,21 @@ const WeatherDashboard = () => {
     <div className="space-y-4">
       <FavoriteCities />
       <div>{/*  favourite cities */}</div>
+       <div className="grid gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" >
+          <CurrentWeather
+            data={weatherQuery?.data}
+            locationName={locationName}
+          />
+
+          <HourlyTempreture data={forecastQuery?.data}
+              />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
+          <WeatherDetails data={weatherQuery?.data} />
+          <WeatherForecast  data={forecastQuery?.data }/>
+        </div>
+      </div>
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
         <Button
@@ -140,21 +155,7 @@ const WeatherDashboard = () => {
       </div>
       {/* currenty and hourly weatherAPI */}
 
-      <div className="grid gap-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" >
-          <CurrentWeather
-            data={weatherQuery?.data}
-            locationName={locationName}
-          />
-
-          <HourlyTempreture data={forecastQuery?.data}
-              />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <WeatherDetails data={weatherQuery?.data} />
-          <WeatherForecast  data={forecastQuery?.data }/>
-        </div>
-      </div>
+     
     </div>
   );
 };
