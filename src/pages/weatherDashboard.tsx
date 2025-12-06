@@ -134,10 +134,7 @@ const WeatherDashboard = () => {
               />
         </div>
 
-       <div className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <WeatherDetails data={weatherQuery?.data} />
-          <WeatherForecast  data={forecastQuery?.data }/>
-        </div>
+    
    
   
       </div>
@@ -157,6 +154,11 @@ const WeatherDashboard = () => {
           />
         </Button>
       </div>
+
+         <div className="grid grid-cols-1 md:grid-cols-2 items-start">
+          <WeatherDetails data={weatherQuery?.data} />
+          <WeatherForecast  data={forecastQuery?.data }/>
+        </div>
  
       {/* currenty and hourly weatherAPI */}
 
