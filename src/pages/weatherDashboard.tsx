@@ -134,21 +134,15 @@ const WeatherDashboard = () => {
               />
         </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start">
+       <div className="grid grid-cols-1 md:grid-cols-2 items-start">
           <WeatherDetails data={weatherQuery?.data} />
           <WeatherForecast  data={forecastQuery?.data }/>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <WeatherDetails data={weatherQuery?.data} />
-          <WeatherForecast  data={forecastQuery?.data }/>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <WeatherDetails data={weatherQuery?.data} />
-          <WeatherForecast  data={forecastQuery?.data }/>
-        </div>
+   
+  
       </div>
       <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold tracking-tight">My Location</h1>
+      
         <Button
           variant={"outline"}
           size={"icon"}
@@ -163,8 +157,7 @@ const WeatherDashboard = () => {
           />
         </Button>
       </div>
-
-             <h1 className="text-xl font-bold tracking-tight">My Location</h1>
+ 
       {/* currenty and hourly weatherAPI */}
 
      
